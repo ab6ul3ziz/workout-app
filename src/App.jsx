@@ -15,14 +15,17 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
-            <Route path="/" element={user ? <Home /> : <Login />} />
+            <Route
+              path="/"
+              element={user ? <Home /> : <Navigate to="/login" />}
+            />
             <Route
               path="/saved"
-              element={user ? <SavedWorkouts /> : <Login />}
+              element={user ? <SavedWorkouts /> : <Navigate to="/login" />}
             />
             <Route
               path="/all-workout"
-              element={user ? <AllWorkouts /> : <Login />}
+              element={user ? <AllWorkouts /> : <Navigate to="/login" />}
             />
             <Route
               path="/login"
