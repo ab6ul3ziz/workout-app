@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "https://workout-app-isxj.onrender.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
