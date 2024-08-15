@@ -23,14 +23,17 @@ export default function Form() {
       reps,
     };
 
-    const res = await fetch("https://workouts-buddy.onrender.com/api/workout", {
-      method: "POST",
-      body: JSON.stringify(workout),
-      headers: {
-        "Content-Type": "application/json",
-        Authorizaion: `Bearer ${user.token}`,
-      },
-    });
+    const res = await fetch(
+      "https://workouts-api-xlbz.onrender.com/api/workout",
+      {
+        method: "POST",
+        body: JSON.stringify(workout),
+        headers: {
+          "Content-Type": "application/json",
+          Authorizaion: `Bearer ${user.token}`,
+        },
+      }
+    );
 
     const json = await res.json();
     if (!res.ok) {

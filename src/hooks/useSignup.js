@@ -11,7 +11,7 @@ export default function useSignup() {
     setIsLoading(true);
     setError(null);
     const res = await fetch(
-      "https://workouts-buddy.onrender.com/api/user/signup",
+      "https://workouts-api-xlbz.onrender.com/api/user/signup",
       {
         method: "POST",
         headers: {

@@ -9,7 +9,7 @@ export default function AllWorkouts() {
     const getAllWorkouts = async () => {
       try {
         const res = await fetch(
-          "https://workouts-buddy.onrender.com/api/workout/all",
+          "https://workouts-api-xlbz.onrender.com/api/workout/all",
           {
             headers: {
               "Content-Type": "application/json",

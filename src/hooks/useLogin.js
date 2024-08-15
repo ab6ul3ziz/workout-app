@@ -11,7 +11,7 @@ export default function useLogin() {
     setIsLoading(true);
     setError(null);
     const res = await fetch(
-      "https://workouts-buddy.onrender.com/api/user/login",
+      "https://workouts-api-xlbz.onrender.com/api/user/login",
       {
         method: "POST",
         headers: {

@@ -9,7 +9,7 @@ export default function useWorkouts() {
   const fetchWorkout = async () => {
     try {
       const res = await fetch(
-        "https://workouts-buddy.onrender.com/api/workout",
+        "https://workouts-api-xlbz.onrender.com/api/workout",
         {
           headers: {
             Authorizaion: `Bearer ${user.token}`,
@@ -26,7 +26,7 @@ export default function useWorkouts() {
   const getSaved = async () => {
     try {
       const res = await fetch(
-        `https://workouts-buddy.onrender.com/api/workout/${user.userId}/saved`,
+        `https://workouts-api-xlbz.onrender.com/api/workout/${user.userId}/saved`,
         {
           headers: {
             "Content-Type": "application/json",

@@ -12,7 +12,7 @@ export default function WorkoutDetails({ workout }) {
     const { userId } = user;
     try {
       const res = await fetch(
-        "https://workouts-buddy.onrender.com/api/workout/save",
+        "https://workouts-api-xlbz.onrender.com/api/workout/save",
         {
           method: "PUT",
           body: JSON.stringify({ userId, workoutId }),
@@ -35,7 +35,7 @@ export default function WorkoutDetails({ workout }) {
       return;
     }
     const res = await fetch(
-      `https://workouts-buddy.onrender.com/api/workout/${workout._id}`,
+      `https://workouts-api-xlbz.onrender.com/api/workout/${workout._id}`,
       {
         method: "DELETE",
         headers: {
@@ -53,7 +53,7 @@ export default function WorkoutDetails({ workout }) {
       return;
     }
     const res = await fetch(
-      `https://workouts-buddy.onrender.com/api/workout/${user.userId}/${workoutId}`,
+      `https://workouts-api-xlbz.onrender.com/api/workout/${user.userId}/${workoutId}`,
       {
         method: "DELETE",
         headers: {
