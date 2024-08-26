@@ -83,29 +83,55 @@ export default function WorkoutDetails({ workout }) {
       <span onClick={handleClick} style={{ scale: "1.7" }}>
         🗑
       </span>
-      {!isSaved ? (
-        <button
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexDirection: "row-reverse",
+        }}
+      >
+        {}
+        <div
           style={{
             display: "flex",
-            justifyContent: "right",
-            cursor: "pointer",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
-          onClick={() => handleSave(workout._id)}
         >
-          save
-        </button>
-      ) : (
-        <button
-          style={{
-            display: "flex",
-            justifyContent: "right",
-            cursor: "pointer",
-          }}
-          onClick={() => handleUnSave(workout._id)}
-        >
-          unsave
-        </button>
-      )}
+          {workout.image.map((img) => (
+            <img
+              key={img._id}
+              src={img.url}
+              alt=""
+              style={{ width: "100px" }}
+            />
+          ))}
+        </div>
+        {!isSaved ? (
+          <button
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              cursor: "pointer",
+            }}
+            onClick={() => handleSave(workout._id)}
+          >
+            save
+          </button>
+        ) : (
+          <button
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              cursor: "pointer",
+            }}
+            onClick={() => handleUnSave(workout._id)}
+          >
+            unsave
+          </button>
+        )}
+      </div>
     </div>
   );
 }
